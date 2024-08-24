@@ -22,6 +22,31 @@ void* list_add_item(list_t* ls, void* item)
   return item;
 }
 
+void* list_insert_item(list_t* ls, void* item, const unsigned int index)
+{
+  int i;
+  void* temp_item;
+  void* loop_temp;
+
+  if (index >= ls->size)
+    return NULL;
+
+  temp_item = ls->items[index];
+  ls->size++;
+  ls->last_index = ls->size-1;
+  ls->items = realloc(ls->items, ls->size*ls->item_size);
+  ls->items[index] = item;
+
+  for (i = index+1; i < ls->size; i++)
+  {
+    loop_temp = ls->items[i];
+    ls->items[i] = temp_item;
+    temp_item = loop_temp;
+  }
+
+  return item;
+}
+
 int list_index_of(list_t* ls, void* item)
 {
   int i = 0;

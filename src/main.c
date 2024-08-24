@@ -43,13 +43,15 @@ int main(void)
   a3 = list_add_item(ls, animal_create("Dog", 7));
   a4 = list_add_item(ls, animal_create("Chicken",23));
   a5 = list_add_item(ls, animal_create("Lamb", 1));
-  a5 = animal_create("Turkey", 21);
+  a6 = animal_create("Turkey", 21);
 
   printf("Before removal:\n");
   for (i = 0; i < ls->size; i++)
     printf("\t%s\n", ((animal_t*) ls->items[i])->name);
 
+  list_insert_item(ls, a6, 0);
   list_remove_item(ls, a3);
+  list_remove_index(ls, 0);
 
   printf("After removal:\n");
   for (i = 0; i < ls->size; i++)

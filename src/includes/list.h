@@ -48,6 +48,14 @@ Used to add an item to a list.
 void* list_add_item(list_t*, void*);
 
 /*
+Used to insert an item into a list at the specified index.
+@param list_t*: The list the item should be inserted into
+@param void*: The item that should be inserted
+@param int: The index where the item should be inserted to
+*/
+void* list_insert_item(list_t*, void*, const unsigned int);
+
+/*
 Used to find the index of a specific item inside a list.
 @param list_t*: The list the item should be looked up in
 @param void*: The item that's index should be found
