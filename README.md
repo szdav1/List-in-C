@@ -69,6 +69,8 @@
 >   
 >   > This will release every resource related to the list making it unusable!
 
+---
+
 Note that the `list_shift_left()` is not mentioned above. That is because it is only used as a helper function during the removing process. It should not be used anywhere else in normal situations as it does not act in a way a 'normal' shift does.
 
 The header file contains more informations about the list its self and about the functions.
