@@ -23,7 +23,7 @@
 > 
 > - First, a list must be created using the `list_create()` function.
 >   
->   *Parameters*: **int item_size, (void) (*free_func)(void\*)**
+>   *Parameters*: **int item_size, (void) (\*free_func)(void\*)**
 >   
 >   > The **free_func** is a pointer to the function that is going to be used for freeing up memory space when removing an item from the list. It is also used when the list is 'destroyed'.
 >   
@@ -31,13 +31,13 @@
 > 
 > - Items can be added to the list using the `list_add_item()` function.
 >   
->   *Parameters*: **list_t\* ls, void* item**
+>   *Parameters*: **list_t\* ls, void\* item**
 >   
 >   ---
 > 
 > - Items can be inserted into the list using the `list_insert_item()` function.
 >   
->   *Parameters*: **list_t\* ls, void* item, int index**
+>   *Parameters*: **list_t\* ls, void\* item, int index**
 >   
 >   > Note that if the index is out of the range of the list, the method returns immediately.
 >   
@@ -45,7 +45,7 @@
 > 
 > - The index of an item can be queried using the `list_index_of()` function.
 >   
->   *Parameters*: **list_t* ls, void* item, void* item**
+>   *Parameters*: **list_t\* ls, void\* item**
 >   
 >   > If the item is not in the list, **-1** is returned.
 >   
@@ -53,13 +53,13 @@
 > 
 > - An item can be removed from a list using the `list_remove_item()` function.
 >   
->   *Parameters*: **list_t* ls, void* item, void* item**
+>   *Parameters*: **list_t* ls, void\* item**
 >   
 >   ---
 > 
 > - An item can be remove from a list by index using the `list_remove_index()` function.
 >   
->   *Parameters*: **list_t* ls, void* item, int index**
+>   *Parameters*: **list_t\* ls, void\* item, int index**
 >   
 >   ---
 > 
